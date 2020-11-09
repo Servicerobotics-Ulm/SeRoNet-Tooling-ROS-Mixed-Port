@@ -20,7 +20,7 @@
   <eClassifiers xsi:type="ecore:EClass" name="RosSubscriber" eSuperTypes="#//RosTopic"/>
   <eClassifiers xsi:type="ecore:EClass" name="RosSrvServer" eSuperTypes="#//RosService"/>
   <eClassifiers xsi:type="ecore:EClass" name="RosSrvClient" eSuperTypes="#//RosService"/>
-  <eClassifiers xsi:type="ecore:EClass" name="RosInterface" abstract="true" eSuperTypes="../../org.ecore.base.mixedport/model/mixedport.ecore#//MixedPortROSBase"/>
+  <eClassifiers xsi:type="ecore:EClass" name="RosInterface" abstract="true" eSuperTypes="../../org.eclipse.smartmdsd.ecore.base.mixedport/model/mixedport.ecore#//MixedPortROSBase"/>
   <eClassifiers xsi:type="ecore:EClass" name="RosActionServer" eSuperTypes="#//RosAction"/>
   <eClassifiers xsi:type="ecore:EClass" name="RosActionClient" eSuperTypes="#//RosAction"/>
   <eClassifiers xsi:type="ecore:EClass" name="RosAction" abstract="true" eSuperTypes="#//RosInterface">

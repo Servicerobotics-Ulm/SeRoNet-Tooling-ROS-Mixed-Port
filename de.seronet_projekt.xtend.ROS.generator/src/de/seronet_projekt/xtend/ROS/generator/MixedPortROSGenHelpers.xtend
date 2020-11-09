@@ -35,8 +35,8 @@
 //--------------------------------------------------------------------------
 package de.seronet_projekt.xtend.ROS.generator
 
-import org.ecore.component.componentDefinition.ComponentDefinition
-import org.ecore.component.seronetExtension.MixedPortROS
+import org.eclipse.smartmdsd.ecore.component.componentDefinition.ComponentDefinition
+import org.eclipse.smartmdsd.ecore.component.seronetExtension.MixedPortROS
 import rosInterfacesPool.RosTopic
 import rosInterfacesPool.RosService
 import rosInterfacesPool.RosAction

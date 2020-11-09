@@ -7,8 +7,9 @@ import org.eclipse.emf.ecore.EPackage;
 
 import org.eclipse.emf.ecore.util.Switch;
 
-import org.ecore.base.mixedport.AbstractMixedPortDefinition;
-import org.ecore.base.mixedport.MixedPortROSBase;
+import org.eclipse.smartmdsd.ecore.base.mixedport.AbstractMixedPortDefinition;
+import org.eclipse.smartmdsd.ecore.base.mixedport.MixedPortROSBase;
+
 import rosInterfacesPool.*;
 
 /**

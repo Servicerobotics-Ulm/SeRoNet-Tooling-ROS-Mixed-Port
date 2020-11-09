@@ -5,8 +5,8 @@ import rosInterfacesPool.RosSrvClient
 import rosInterfacesPool.RosPublisher
 import rosInterfacesPool.RosSubscriber
 import rosInterfacesPool.RosSrvServer
-import org.ecore.component.seronetExtension.MixedPortROS
-import org.ecore.component.componentDefinition.ComponentDefinition
+import org.eclipse.smartmdsd.ecore.component.seronetExtension.MixedPortROS
+import org.eclipse.smartmdsd.ecore.component.componentDefinition.ComponentDefinition
 import rosInterfacesPool.RosActionClient
 import rosInterfacesPool.RosActionServer
 

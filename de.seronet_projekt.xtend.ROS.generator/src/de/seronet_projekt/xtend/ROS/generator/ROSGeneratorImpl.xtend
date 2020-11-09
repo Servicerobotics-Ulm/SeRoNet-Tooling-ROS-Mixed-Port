@@ -41,8 +41,8 @@ import org.eclipse.emf.ecore.resource.Resource
 import org.eclipse.xtext.generator.IFileSystemAccess2
 import org.eclipse.xtext.generator.IGeneratorContext
 import com.google.inject.Inject
-import org.ecore.component.componentDefinition.ComponentDefinition
-import org.ecore.component.seronetExtension.MixedPortROS
+import org.eclipse.smartmdsd.ecore.component.componentDefinition.ComponentDefinition
+import org.eclipse.smartmdsd.ecore.component.seronetExtension.MixedPortROS
 import de.seronet_projekt.xtend.ROS.generator.MixedPortROSGenHelpers
 
 class ROSGeneratorImpl extends AbstractGenerator {

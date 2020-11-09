@@ -6,7 +6,8 @@ import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
-import org.ecore.base.mixedport.MixedportPackage;
+
+import org.eclipse.smartmdsd.ecore.base.mixedport.MixedportPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -460,7 +461,6 @@ public interface RosInterfacesPoolPackage extends EPackage {
 	 * @ordered
 	 */
 	int ROS_SRV_CLIENT_OPERATION_COUNT = ROS_SERVICE_OPERATION_COUNT + 0;
-
 
 	/**
 	 * The meta object id for the '{@link rosInterfacesPool.impl.RosActionImpl <em>Ros Action</em>}' class.

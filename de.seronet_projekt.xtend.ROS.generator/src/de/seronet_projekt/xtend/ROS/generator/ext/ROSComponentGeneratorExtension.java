@@ -1,7 +1,7 @@
 package de.seronet_projekt.xtend.ROS.generator.ext;
 
-import org.ecore.component.componentDefinition.ComponentDefinition;
-import org.xtend.smartsoft.generator.component.ComponentGeneratorExtension;
+import org.eclipse.smartmdsd.ecore.component.componentDefinition.ComponentDefinition;
+import org.eclipse.smartmdsd.xtend.smartsoft.generator.component.ComponentGeneratorExtension;
 
 import com.google.inject.AbstractModule;
 import com.google.inject.Guice;

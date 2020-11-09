@@ -16,8 +16,8 @@ Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.ui.workbench,
  org.eclipse.xtext,
  de.seronet_projekt.ros.interfaces.pool,
- org.xtend.smartsoft.generator,
- org.ecore.component.componentDefinition,
- org.xtext.component.componentDefinition,
- org.ecore.component.seronetExtension
+ org.eclipse.smartmdsd.xtend.smartsoft.generator,
+ org.eclipse.smartmdsd.ecore.component.componentDefinition,
+ org.eclipse.smartmdsd.xtext.component.componentDefinition,
+ org.eclipse.smartmdsd.ecore.component.seronetExtension
 Bundle-Vendor: SeRoNet (www.seronet-projekt.de)

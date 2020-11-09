@@ -8,12 +8,13 @@
 	<packaging>pom</packaging>
 
 	<properties>
-		<xtextVersion>2.16.0</xtextVersion>
+		<xtextVersion>2.22.0</xtextVersion>
+		<mwe2Version>2.11.3</mwe2Version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<maven.compiler.source>1.8</maven.compiler.source>
 		<maven.compiler.target>1.8</maven.compiler.target>
 		<!-- Tycho settings -->
-		<tycho-version>1.5.1</tycho-version>
+		<tycho-version>1.7.0</tycho-version>
 		<tycho.disableP2Mirrors>true</tycho.disableP2Mirrors>
 	</properties>
 	<modules>
@@ -26,6 +27,17 @@
 		<module>../de.seronet_projekt.ros.interfaces.pool.xtext.tests</module>
 		<module>../de.seronet_projekt.xtend.ROS.generator</module>
 	</modules>
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>org.eclipse.xtext</groupId>
+				<artifactId>xtext-dev-bom</artifactId>
+				<version>${xtextVersion}</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
 
 	<repositories>
 		<repository>
@@ -36,12 +48,12 @@
 		<repository>
 			<id>SmartMDSD Update Site</id>
 			<layout>p2</layout>
-			<url>https://web2.servicerobotik-ulm.de/files/SmartMDSD_Toolchain/updatesite/latest/</url>
+			<url>https://download.eclipse.org/smartmdsd/updates/releases/v3.15/2020-09/</url>
 		</repository>
 		<repository>
 			<id>eclipse</id>
 			<layout>p2</layout>
-			<url>https://download.eclipse.org/releases/2019-03/</url>
+			<url>https://download.eclipse.org/releases/2020-09/</url>
 		</repository>
 		<repository>
 			<id>Xtext Update Site</id>

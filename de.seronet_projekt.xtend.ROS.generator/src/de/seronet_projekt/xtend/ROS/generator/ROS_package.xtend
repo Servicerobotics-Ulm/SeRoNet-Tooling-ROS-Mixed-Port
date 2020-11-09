@@ -1,6 +1,6 @@
 package de.seronet_projekt.xtend.ROS.generator
 
-import org.ecore.component.componentDefinition.ComponentDefinition
+import org.eclipse.smartmdsd.ecore.component.componentDefinition.ComponentDefinition
 import com.google.inject.Inject
 
 class ROS_package {

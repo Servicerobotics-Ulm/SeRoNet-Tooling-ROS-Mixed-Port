@@ -2,13 +2,13 @@
 <?eclipse version="3.4"?>
 <plugin>
    <extension
-         point="org.xtext.component.componentDefinition.ComponentDefinitionGeneratorEP">
+         point="org.eclipse.smartmdsd.xtext.component.componentDefinition.ComponentDefinitionGeneratorEP">
       <generator
             class="de.seronet_projekt.xtend.ROS.generator.ROSGenerator">
       </generator>
    </extension>
    <extension
-         point="org.xtend.smartsoft.generator.ComponentGeneratorExtension">
+         point="org.eclipse.smartmdsd.xtend.smartsoft.generator.ComponentGeneratorExtension">
       <ComponentGeneratorExtension
             class="de.seronet_projekt.xtend.ROS.generator.ext.ROSComponentGeneratorExtension">
       </ComponentGeneratorExtension>

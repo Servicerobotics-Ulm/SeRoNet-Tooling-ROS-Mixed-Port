@@ -3,7 +3,9 @@
 package rosInterfacesPool.impl;
 
 import org.eclipse.emf.ecore.EClass;
-import org.ecore.base.mixedport.impl.MixedPortROSBaseImpl;
+
+import org.eclipse.smartmdsd.ecore.base.mixedport.impl.MixedPortROSBaseImpl;
+
 import rosInterfacesPool.RosInterface;
 import rosInterfacesPool.RosInterfacesPoolPackage;
 

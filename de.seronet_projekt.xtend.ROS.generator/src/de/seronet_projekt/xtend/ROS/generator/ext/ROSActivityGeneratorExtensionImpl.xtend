@@ -1,11 +1,11 @@
 package de.seronet_projekt.xtend.ROS.generator.ext
 
-import org.xtend.smartsoft.generator.component.ActivityGeneratorExtension
-import org.ecore.component.componentDefinition.Activity
-import org.ecore.component.seronetExtension.MixedPortROSLink
+import org.eclipse.smartmdsd.xtend.smartsoft.generator.component.ActivityGeneratorExtension
+import org.eclipse.smartmdsd.ecore.component.componentDefinition.Activity
+import org.eclipse.smartmdsd.ecore.component.seronetExtension.MixedPortROSLink
 import com.google.inject.Inject
 import de.seronet_projekt.xtend.ROS.generator.MixedPortROSGenHelpers
-import org.ecore.component.componentDefinition.ComponentDefinition
+import org.eclipse.smartmdsd.ecore.component.componentDefinition.ComponentDefinition
 import rosInterfacesPool.RosSubscriber
 import rosInterfacesPool.RosService
 

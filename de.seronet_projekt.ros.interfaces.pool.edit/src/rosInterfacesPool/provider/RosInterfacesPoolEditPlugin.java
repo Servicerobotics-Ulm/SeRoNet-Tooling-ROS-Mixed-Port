@@ -5,7 +5,8 @@ package rosInterfacesPool.provider;
 import org.eclipse.emf.common.EMFPlugin;
 
 import org.eclipse.emf.common.util.ResourceLocator;
-import org.ecore.base.mixedport.provider.MixedportEditPlugin;
+
+import org.eclipse.smartmdsd.ecore.base.mixedport.provider.MixedportEditPlugin;
 
 /**
  * This is the central singleton for the RosInterfacesPool edit plugin.

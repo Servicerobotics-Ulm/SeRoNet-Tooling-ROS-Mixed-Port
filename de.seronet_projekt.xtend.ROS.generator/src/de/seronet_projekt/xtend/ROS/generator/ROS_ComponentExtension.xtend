@@ -1,14 +1,14 @@
 package de.seronet_projekt.xtend.ROS.generator
 
 import com.google.inject.Inject
-import org.xtend.smartsoft.generator.component.SmartComponentExtension
-import org.xtend.smartsoft.generator.component.SmartComponent
+import org.eclipse.smartmdsd.xtend.smartsoft.generator.component.SmartComponentExtension
+import org.eclipse.smartmdsd.xtend.smartsoft.generator.component.SmartComponent
 import rosInterfacesPool.RosPublisher
 import rosInterfacesPool.RosSubscriber
 import rosInterfacesPool.RosSrvClient
 import rosInterfacesPool.RosSrvServer
-import org.ecore.component.componentDefinition.ComponentDefinition
-import org.ecore.component.seronetExtension.MixedPortROS
+import org.eclipse.smartmdsd.ecore.component.componentDefinition.ComponentDefinition
+import org.eclipse.smartmdsd.ecore.component.seronetExtension.MixedPortROS
 import rosInterfacesPool.RosActionClient
 import rosInterfacesPool.RosActionServer
 

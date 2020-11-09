@@ -9,8 +9,9 @@ import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
 
 import org.eclipse.emf.ecore.EObject;
 
-import org.ecore.base.mixedport.AbstractMixedPortDefinition;
-import org.ecore.base.mixedport.MixedPortROSBase;
+import org.eclipse.smartmdsd.ecore.base.mixedport.AbstractMixedPortDefinition;
+import org.eclipse.smartmdsd.ecore.base.mixedport.MixedPortROSBase;
+
 import rosInterfacesPool.*;
 
 /**
@@ -296,13 +297,13 @@ public class RosInterfacesPoolAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.ecore.base.mixedport.AbstractMixedPortDefinition <em>Abstract Mixed Port Definition</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.smartmdsd.ecore.base.mixedport.AbstractMixedPortDefinition <em>Abstract Mixed Port Definition</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.ecore.base.mixedport.AbstractMixedPortDefinition
+	 * @see org.eclipse.smartmdsd.ecore.base.mixedport.AbstractMixedPortDefinition
 	 * @generated
 	 */
 	public Adapter createAbstractMixedPortDefinitionAdapter() {
@@ -310,13 +311,13 @@ public class RosInterfacesPoolAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.ecore.base.mixedport.MixedPortROSBase <em>Mixed Port ROS Base</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.eclipse.smartmdsd.ecore.base.mixedport.MixedPortROSBase <em>Mixed Port ROS Base</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.ecore.base.mixedport.MixedPortROSBase
+	 * @see org.eclipse.smartmdsd.ecore.base.mixedport.MixedPortROSBase
 	 * @generated
 	 */
 	public Adapter createMixedPortROSBaseAdapter() {

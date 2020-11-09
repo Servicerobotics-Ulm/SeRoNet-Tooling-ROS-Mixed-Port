@@ -41,9 +41,9 @@ import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.xtext.generator.AbstractGenerator;
 import org.eclipse.xtext.generator.IFileSystemAccess2;
 import org.eclipse.xtext.generator.IGeneratorContext;
-import org.ecore.component.componentDefinition.AbstractComponentElement;
-import org.ecore.component.componentDefinition.ComponentDefModel;
-import org.ecore.component.seronetExtension.MixedPortROS;
+import org.eclipse.smartmdsd.ecore.component.componentDefinition.AbstractComponentElement;
+import org.eclipse.smartmdsd.ecore.component.componentDefinition.ComponentDefModel;
+import org.eclipse.smartmdsd.ecore.component.seronetExtension.MixedPortROS;
 
 import com.google.inject.Guice;
 import com.google.inject.Injector;

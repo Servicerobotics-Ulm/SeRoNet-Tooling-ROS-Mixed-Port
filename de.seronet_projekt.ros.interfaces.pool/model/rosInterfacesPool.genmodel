@@ -3,7 +3,7 @@
     xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/de.seronet_projekt.ros.interfaces.pool/src" modelPluginID="de.seronet_projekt.ros.interfaces.pool"
     modelName="RosInterfacesPool" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
     importerID="org.eclipse.emf.importer.ecore" complianceLevel="8.0" copyrightFields="false"
-    usedGenPackages="../../org.ecore.base.mixedport/model/mixedport.genmodel#//mixedport"
+    usedGenPackages="../../org.eclipse.smartmdsd.ecore.base.mixedport/model/mixedport.genmodel#//mixedport"
     operationReflection="true" importOrganizing="true">
   <foreignModel>rosInterfacesPool.ecore</foreignModel>
   <genPackages prefix="RosInterfacesPool" disposableProviderFactory="true" extensibleProviderFactory="true"

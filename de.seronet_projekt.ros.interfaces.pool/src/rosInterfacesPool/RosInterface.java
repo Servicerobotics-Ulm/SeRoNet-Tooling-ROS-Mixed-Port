@@ -2,7 +2,7 @@
  */
 package rosInterfacesPool;
 
-import org.ecore.base.mixedport.MixedPortROSBase;
+import org.eclipse.smartmdsd.ecore.base.mixedport.MixedPortROSBase;
 
 /**
  * <!-- begin-user-doc -->

@@ -1,8 +1,8 @@
 package de.seronet_projekt.xtend.ROS.generator.ext
 
-import org.xtend.smartsoft.generator.component.ComponentGeneratorExtension
-import org.ecore.component.componentDefinition.ComponentDefinition
-import org.ecore.component.seronetExtension.MixedPortROS
+import org.eclipse.smartmdsd.xtend.smartsoft.generator.component.ComponentGeneratorExtension
+import org.eclipse.smartmdsd.ecore.component.componentDefinition.ComponentDefinition
+import org.eclipse.smartmdsd.ecore.component.seronetExtension.MixedPortROS
 
 class ROSComponentGeneratorExtensionImpl implements ComponentGeneratorExtension {
 	override getExtensionName(ComponentDefinition component) {

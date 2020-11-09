@@ -13,5 +13,5 @@ Export-Package: rosInterfacesPool,
  rosInterfacesPool.util
 Require-Bundle: org.eclipse.emf.ecore;visibility:=reexport,
  org.eclipse.core.runtime,
- org.ecore.base.mixedport;visibility:=reexport
+ org.eclipse.smartmdsd.ecore.base.mixedport;visibility:=reexport
 Bundle-ActivationPolicy: lazy

@@ -8,8 +8,11 @@ import java.util.List;
 
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
+
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
-import org.ecore.base.mixedport.provider.MixedPortROSBaseItemProvider;
+
+import org.eclipse.smartmdsd.ecore.base.mixedport.provider.MixedPortROSBaseItemProvider;
+
 import rosInterfacesPool.RosInterface;
 
 /**
@@ -18,8 +21,7 @@ import rosInterfacesPool.RosInterface;
  * <!-- end-user-doc -->
  * @generated
  */
-public class RosInterfaceItemProvider 
-	extends MixedPortROSBaseItemProvider {
+public class RosInterfaceItemProvider extends MixedPortROSBaseItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
@@ -58,7 +60,7 @@ public class RosInterfaceItemProvider
 			getString("_UI_RosInterface_type") :
 			getString("_UI_RosInterface_type") + " " + label;
 	}
-	
+
 
 	/**
 	 * This handles model notifications by calling {@link #updateChildren} to update any cached

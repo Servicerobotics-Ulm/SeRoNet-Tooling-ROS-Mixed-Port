@@ -1,7 +1,7 @@
 package de.seronet_projekt.xtend.ROS.generator
 
 import com.google.inject.Inject
-import org.ecore.component.componentDefinition.ComponentDefinition
+import org.eclipse.smartmdsd.ecore.component.componentDefinition.ComponentDefinition
 
 class ROS_CMake {
 	@Inject extension CopyrightHelpers;

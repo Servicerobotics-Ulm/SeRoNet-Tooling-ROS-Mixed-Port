@@ -9,7 +9,8 @@ import org.eclipse.emf.ecore.EReference;
 
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 
-import org.ecore.base.mixedport.MixedportPackage;
+import org.eclipse.smartmdsd.ecore.base.mixedport.MixedportPackage;
+
 import rosInterfacesPool.RosAction;
 import rosInterfacesPool.RosActionClient;
 import rosInterfacesPool.RosActionServer;

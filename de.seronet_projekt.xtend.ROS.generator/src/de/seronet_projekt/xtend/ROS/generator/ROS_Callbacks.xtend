@@ -38,10 +38,10 @@ package de.seronet_projekt.xtend.ROS.generator
 import com.google.inject.Inject
 import rosInterfacesPool.RosSubscriber
 import rosInterfacesPool.RosSrvServer
-import org.ecore.component.componentDefinition.ComponentDefinition
-import org.xtend.smartsoft.generator.component.SmartComponent
-import org.ecore.component.componentDefinition.Activity
-import org.ecore.component.seronetExtension.MixedPortROSLink
+import org.eclipse.smartmdsd.ecore.component.componentDefinition.ComponentDefinition
+import org.eclipse.smartmdsd.xtend.smartsoft.generator.component.SmartComponent
+import org.eclipse.smartmdsd.ecore.component.componentDefinition.Activity
+import org.eclipse.smartmdsd.ecore.component.seronetExtension.MixedPortROSLink
 
 class ROS_Callbacks {
 	@Inject extension CopyrightHelpers;
