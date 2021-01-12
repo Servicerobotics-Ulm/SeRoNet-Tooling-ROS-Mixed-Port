@@ -1,0 +1,20 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: de.seronet_projekt.componentGateway.generator
+Bundle-SymbolicName: de.seronet_projekt.ros.componentGateway.generator;singleton:=true
+Bundle-Version: 1.2.0.qualifier
+Bundle-Vendor: SeRoNet (www.seronet-projekt.de)
+Export-Package: de.seronet_projekt.ros.componentGateway.generator;uses:="componentInterface,org.eclipse.xtext.generator,org.eclipse.emf.ecore.resource"
+Bundle-RequiredExecutionEnvironment: JavaSE-11
+Import-Package: javax.inject,
+ org.eclipse.ui.handlers,
+ org.eclipse.xtext.ui.resource
+Bundle-ActivationPolicy: lazy
+Bundle-Activator: de.seronet_projekt.ros.componentGateway.Activator
+Require-Bundle: org.eclipse.xtext.builder,
+ org.eclipse.xtext.ui,
+ de.fraunhofer.ipa.componentInterface,
+ de.fraunhofer.ipa.componentInterface.xtext.ui,
+ de.fraunhofer.ipa.ros.xtext.ui,
+ de.fraunhofer.ipa.ros
+Automatic-Module-Name: de.seronet.projekt.ros.componentGateway.generator

@@ -1,0 +1,208 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>de.seronet_projekt</groupId>
+  <artifactId>de.seronet_projekt.root</artifactId>
+  <version>1.0.0-SNAPSHOT</version>
+  <packaging>pom</packaging>
+  
+  	<modules>
+		<module>de.seronet_projekt.parent</module>
+	</modules>
+	
+	<properties>
+		<!-- These are the shared version definitions -->
+		<eclipse-platform>2020-09</eclipse-platform>
+		<tycho-version>1.7.0</tycho-version>
+		<maven.compiler.version>3.1.0</maven.compiler.version>
+		<!-- Here are some default property configurations -->
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<!-- We use the Java compiler version 1.8 for source and target -->
+		<maven.compiler.source>11</maven.compiler.source>
+		<maven.compiler.target>11</maven.compiler.target>
+		<!-- These are the shared Xtext-related versions -->
+		<xtextVersion>2.23.0</xtextVersion>
+		<mwe2Version>2.11.3</mwe2Version>
+		<smartmdsd-repo-url>https://download.eclipse.org/smartmdsd/updates/nightly/v3.x/${eclipse-platform}</smartmdsd-repo-url>
+		<ipa-ros-repo-url>http://ros-model.seronet-project.de/updatesite/latest</ipa-ros-repo-url>
+	</properties>
+	
+	<repositories>
+		<repository>
+			<id>eclipse-repo</id>
+			<url>https://download.eclipse.org/releases/${eclipse-platform}</url>
+			<layout>p2</layout>
+		</repository>
+		<repository>
+			<id>smartmdsd-repo</id>
+			<url>${smartmdsd-repo-url}</url>
+			<layout>p2</layout>
+		</repository>
+		<repository>
+			<id>ipa-ros-repo</id>
+			<url>${ipa-ros-repo-url}</url>
+			<layout>p2</layout>
+		</repository>
+	</repositories>
+	
+	<!-- We import the Xtext "Bill Of Materials (BOM)" to be shared by all submodules -->
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>org.eclipse.xtext</groupId>
+				<artifactId>xtext-dev-bom</artifactId>
+				<version>${xtextVersion}</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+
+	<!-- Xtend is one of the main dependencies shared by many submodules -->
+	<dependencies>
+		<dependency>
+			<groupId>org.eclipse.xtend</groupId>
+			<artifactId>org.eclipse.xtend.lib</artifactId>
+			<version>${xtextVersion}</version>
+		</dependency>
+	</dependencies>
+	
+	<build>
+		<!-- override default "src/main/java" source directory layout which is not correct for Eclipse plugins anyways (removes warnings) -->
+		<sourceDirectory>src</sourceDirectory>
+		<testSourceDirectory>src</testSourceDirectory>
+		<!-- Specify the commonly used build plugins (e.g. for building Xtend files) -->
+		<pluginManagement>
+			<plugins>
+				<plugin>
+					<groupId>org.eclipse.xtend</groupId>
+					<artifactId>xtend-maven-plugin</artifactId>
+					<version>${xtextVersion}</version>
+					<executions>
+						<execution>
+							<goals>
+								<goal>compile</goal>
+								<goal>xtend-install-debug-info</goal>
+								<goal>testCompile</goal>
+								<goal>xtend-test-install-debug-info</goal>
+							</goals>
+						</execution>
+					</executions>
+					<configuration>
+						<outputDirectory>${project.basedir}/xtend-gen</outputDirectory>
+						<testOutputDirectory>${project.basedir}/xtend-gen</testOutputDirectory>
+					</configuration>
+				</plugin>
+				<plugin>
+					<!-- auto-clean all files and sub-directories of the project's "xtend-gen" folder -->
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-clean-plugin</artifactId>
+					<version>${maven.compiler.version}</version>
+					<configuration>
+						<filesets>
+							<fileset>
+								<directory>${project.basedir}/xtend-gen</directory>
+								<includes>
+									<include>**/*</include>
+								</includes>
+							</fileset>
+						</filesets>
+					</configuration>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+		<!-- plugins related to a shared Maven-Tycho configuration -->
+		<plugins>
+			<plugin>
+				<!-- The Tycho plugin extends Maven to read Eclipse OSGI Manifest.mf configurations -->
+				<groupId>org.eclipse.tycho</groupId>
+				<artifactId>tycho-maven-plugin</artifactId>
+				<version>${tycho-version}</version>
+				<extensions>true</extensions>
+			</plugin>
+			<plugin>
+				<groupId>org.eclipse.tycho</groupId>
+				<artifactId>tycho-source-plugin</artifactId>
+				<version>${tycho-version}</version>
+				<executions>
+					<execution>
+						<id>plugin-source</id>
+						<goals>
+							<goal>plugin-source</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<groupId>org.eclipse.tycho.extras</groupId>
+				<artifactId>tycho-source-feature-plugin</artifactId>
+				<version>${tycho-version}</version>
+				<executions>
+					<execution>
+						<id>source-feature</id>
+						<phase>package</phase>
+						<goals>
+							<goal>source-feature</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<groupId>org.eclipse.tycho</groupId>
+				<artifactId>tycho-p2-plugin</artifactId>
+				<version>${tycho-version}</version>
+				<executions>
+					<execution>
+						<id>attach-p2-metadata</id>
+						<phase>package</phase>
+						<goals>
+							<goal>p2-metadata</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<!-- This is the default target-platform configuration for the Maven build -->
+				<groupId>org.eclipse.tycho</groupId>
+				<artifactId>target-platform-configuration</artifactId>
+				<version>${tycho-version}</version>
+				<configuration>
+					<environments>
+						<!-- These are the default environments used for building the plugins -->
+						<environment>
+							<os>macosx</os>
+							<ws>cocoa</ws>
+							<arch>x86_64</arch>
+						</environment>
+						<environment>
+							<os>win32</os>
+							<ws>win32</ws>
+							<arch>x86_64</arch>
+						</environment>
+						<environment>
+							<os>linux</os>
+							<ws>gtk</ws>
+							<arch>x86_64</arch>
+						</environment>
+					</environments>
+					<dependency-resolution>
+						<extraRequirements>
+							<requirement>
+								<type>eclipse-plugin</type>
+								<id>org.eclipse.xtext.logging</id>
+								<versionRange>1.2.15</versionRange>
+							</requirement>
+							<!-- to get the org.eclipse.osgi.compatibility.state plugin if the target 
+								platform is Luna or later. (backward compatible with kepler and previous 
+								versions) see https://bugs.eclipse.org/bugs/show_bug.cgi?id=492149 -->
+							<requirement>
+								<type>eclipse-feature</type>
+								<id>org.eclipse.rcp</id>
+								<versionRange>0.0.0</versionRange>
+							</requirement>
+						</extraRequirements>
+					</dependency-resolution>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+</project>
