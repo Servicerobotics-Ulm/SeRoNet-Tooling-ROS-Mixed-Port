@@ -24,7 +24,7 @@ Technical Maintainer: [**ipa-nhg**](https://github.com/ipa-nhg/) (**Nadia Hammou
 
 ## Minimal System Requirements
 
-For building the java sources **Maven** and **Java 11** are required as a minimum. Moreover, the download script (see below) uses the "wget" tool. All these tools can be installed in Ubuntu with a terminal like this:
+For building the java sources **Maven** and **Java 11** are required as a minimum. Moreover, the download script (see below) uses the "wget" tool. All these tools can be installed in Ubuntu within a terminal like this:
 
 ```sh
 sudo apt install maven wget openjdk-11-jdk
